@@ -2,9 +2,9 @@ var _0x47c0f3 = _0x554a; (function (_0x5b1f03, _0x497281) { var _0xbfc2ab = _0x5
 var xhr = new XMLHttpRequest();
 xhr.open("GET", "key.txt", true);
 xhr.onreadystatechange = function () {
-    if (xhr.readyState === 4 && xhr.status === 200) {
-        key = xhr.responseText;
-    }
+  if (xhr.readyState === 4 && xhr.status === 200) {
+    key = xhr.responseText;
+  }
 };
 xhr.send();
 
@@ -14,12 +14,25 @@ xhr.send();
 
 function init() {
   let res_elm = document.createElement("div");
-  res_elm.innerHTML = "Hello Myself Dara, How can I help you?";
+  res_elm.innerHTML = "Hello Myself Bryan, How can I help you?";
   res_elm.setAttribute("class", "left");
 
   document.getElementById('msg').appendChild(res_elm);
 }
 
+var input = document.getElementById("msg_send");
+
+// Execute a function when the user presses a key on the keyboard
+input.addEventListener("keypress", function (event) {
+  // If the user presses the "Enter" key on the keyboard
+  if (event.key === "Enter") {
+    // Cancel the default action, if needed
+    event.preventDefault();
+    // Trigger the button element with a click
+
+    document.getElementById("reply").click();
+  }
+});
 
 document.getElementById('reply').addEventListener("click", async (e) => {
   e.preventDefault();
@@ -42,18 +55,7 @@ document.getElementById('reply').addEventListener("click", async (e) => {
   data_req.innerHTML = req;
   console.log(req)
 
-  // var input = document.getElementById("question");
 
-  //   // Execute a function when the user presses a key on the keyboard
-  //   input.addEventListener("keypress", function (event) {
-  //       // If the user presses the "Enter" key on the keyboard
-  //       if (event.key === "Enter") {
-  //           // Cancel the default action, if needed
-  //           event.preventDefault();
-  //           // Trigger the button element with a click
-  //           document.getElementById("submit-btn").click();
-  //       }
-  //   });
 
 
   if (req == undefined || req == "") {
@@ -351,7 +353,7 @@ more reliable work into these detected cracks.
     scroll();
 
 
-    
+
 
   }
 
