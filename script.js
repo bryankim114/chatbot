@@ -14,7 +14,7 @@ xhr.send();
 
 function init() {
   let res_elm = document.createElement("div");
-  res_elm.innerHTML = "Hello Myself Bryan, How can I help you?";
+  res_elm.innerHTML = "Hello Bryan, How can I help you?";
   res_elm.setAttribute("class", "left");
 
   document.getElementById('msg').appendChild(res_elm);
@@ -95,7 +95,7 @@ document.getElementById('reply').addEventListener("click", async (e) => {
       messages: [
         {
           role: "system", content:
-            `You are ChatGPT, a large language model trained by OpenAI. If user asks question other than civil building tasks topic please respond him with message I can only answer structures and building topic related questions.
+            `You are ChatGPT, a large language model trained by OpenAI.
 
             Train yourself on following information provided and answer questions.
             Analysis of cracks in structures and buildings
